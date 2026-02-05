@@ -1,13 +1,8 @@
-export default function Page({ params }: { params: { id: string } }) {
-  const id = Number(params.id);
+import ProductClient from "./ProductClient";
 
-  return (
-    <>
-      <h1>Produit #{id}</h1>
-      <p>Fiche produit MVP. V2 : détails + photos depuis l’API backend.</p>
-      <p>
-        <a href="/panier">Ajouter au panier (MVP)</a>
-      </p>
-    </>
-  );
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const productId = parseInt(id, 10);
+
+  return <ProductClient id={productId} />;
 }

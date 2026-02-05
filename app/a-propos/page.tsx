@@ -1,11 +1,14 @@
 export default function Page() {
   return (
-    <>
-      <h1>À propos</h1>
-      <p>
-        La Socketterie (créée en 2019) vend des chaussettes dépareillées. Boutique physique à Nice, France.
+    <div className="card">
+      <span className="badge">La marque</span>
+      <h1 style={{ fontSize: 30, marginTop: 10 }}>À propos</h1>
+      <p className="muted">
+        La Socketterie (créée en 2019) propose des chaussettes dépareillées. Boutique physique à Nice, France.
       </p>
-      <p>Cible : 20–35 ans. Objectif : visibilité + ventes en ligne.</p>
-    </>
+      <p className="muted">
+        Objectif : gagner en visibilité et vendre en ligne (livraison UE, paiement Stripe).
+      </p>
+    </div>
   );
 }

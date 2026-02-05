@@ -1,13 +1,11 @@
 export default function Page() {
   return (
-    <>
-      <h1>Politique de confidentialité</h1>
-      <p>
-        RGPD : collecte minimale (compte, commandes, facturation). Droit d’accès, rectification et suppression.
+    <div className="card">
+      <h1 style={{ fontSize: 30, marginTop: 0 }}>Politique de confidentialité</h1>
+      <p className="muted">
+        RGPD : collecte minimale (compte, commandes, facturation). Droit d’accès/rectification/suppression.
       </p>
-      <p>
-        Cookies : uniquement si nécessaire. Mesure d’audience RGPD-friendly + consentement si outils tiers.
-      </p>
-    </>
+      <p className="muted">Cookies : uniquement si nécessaire. Consentement si outils tiers.</p>
+    </div>
   );
 }
